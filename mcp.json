@@ -1,0 +1,13 @@
+// for vscode mcp config
+{
+	"servers": {
+		"my-mcp-server-todo": {
+			"url": "http://127.0.0.1:8000/mcp",
+			"type": "http",
+			"headers": {
+				"Authorization": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJyb2xlcyI6WyJST0xFX1VTRVIiXSwidXNlcklkIjo2LCJzdWIiOiJ1c2VyQHVzZXIuY29tIiwiaWF0IjoxNzU3ODU2NDU2LCJleHAiOjE3NTc5NDI4NTZ9.Q_OJE0fWSkqf6rq516u9Btm4dpD97pvyQbZk2mlJ8oa5wR55na60ZrrE7CUHSxGX8mlIIP7jvK_ApYzvQMhsXA"
+			}
+		}
+
+	}
+}
