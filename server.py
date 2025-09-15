@@ -1,91 +1,49 @@
-import httpx
-from fastmcp import FastMCP
-# from fastmcp.server.openapi import RouteMap, MCPType
-from fastmcp.experimental.server.openapi import RouteMap, MCPType
+from mcp.server.fastmcp import FastMCP
+from model import WeatherData, GetWeatherData, GetWeatherDataDetail
 
-from pydantic import BaseModel, Field
-
-mcp = FastMCP(name="202509 open api ==> mcp server")
-
-
-class WeatherData(BaseModel):
-    """Weather information structure."""
-
-    temperature: float = Field(description="Temperature in Celsius")
-    humidity: float = Field(description="Humidity percentage")
-    condition: str
-    wind_speed: float
+mcp = FastMCP("streamable-http example", port=8001)
 
 
 @mcp.tool()
-def get_weather() -> WeatherData:
+def get_weather(city: str, unit: str = "celsius") -> WeatherData:
     """Get weather for a city - returns structured data."""
-    # Simulated weather data
     return WeatherData(
+        city=city,
         temperature=22.5,
-        humidity=45.0,
-        condition="sunny",
-        wind_speed=5.2,
+        unit=unit,
     )
 
 
-"""Open API"""
+@mcp.tool()
+def get_weather_req_body(data: GetWeatherData) -> WeatherData:
+    """Get weather for a city - returns structured data."""
+    data = WeatherData()
+    data.city = data.city
+    data.temperature = 50
+    data.unit = data.unit
+    details = GetWeatherDataDetail()
+    details.location = "Some Location"
+    details.timezone = "Some Timezone"
+    data.details = details
 
-# Create an HTTP client for the target API
-client = httpx.AsyncClient(
-    base_url="http://localhost:8080"
-)
+    return data
 
-# Get API doc from http://localhost:8080/api-docs
-openapi_url = "http://localhost:8080/api-docs"
-openapi_spec = httpx.get(openapi_url).json()
 
-# Create the MCP server from the OpenAPI spec
+@mcp.tool()
+def get_weather_no_param() -> WeatherData:
+    """Get weather for a city - returns structured data."""
+    # Simulated weather data
+    return WeatherData(
+        city="San Francisco",
+        temperature=20.5,
+        unit="celsius"
+    )
 
-mcp = FastMCP.from_openapi(
-    openapi_spec=openapi_spec,
-    client=client,
-    route_maps=[
 
-        # Exclude register and login endpoints
-        RouteMap(
-            pattern=r"^/auth/.*",
-            mcp_type=MCPType.EXCLUDE,
-        ),
+@mcp.tool()
+def get_weather_no_response():
+    pass
 
-        # # GET requests with path parameters become ResourceTemplates
-        # 拿 resources 的時候要輸參數
-        # RouteMap(
-        #     methods=["GET"],
-        #     pattern=r".*\{.*\}.*",
-        #     mcp_type=MCPType.RESOURCE_TEMPLATE
-        # ),
-
-        # # All other GET requests become Resources
-        # RouteMap(
-        #     methods=["GET"],
-        #     pattern=r".*",
-        #     mcp_type=MCPType.RESOURCE
-        # ),
-
-        # # 用 API doc 的 tags 做篩選
-        # # Exclude all routes tagged "internal"
-        # RouteMap(
-        #     tags={"internal"},
-        #     mcp_type=MCPType.EXCLUDE,
-        # ),
-    ],
-)
-
-# Add custom tool
-mcp.add_tool(get_weather)
 
 if __name__ == "__main__":
-    # mcp.run(transport="http")
-
-    # Option 2: With ASGI app
-    app = mcp.http_app()
-    # To run your ASGI application
-    import uvicorn
-
-    uvicorn.run(app, port=8000)
+    mcp.run(transport="streamable-http")
