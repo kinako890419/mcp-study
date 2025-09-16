@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="733e41bd-74d4-4a9a-9ad0-13da2a00b706" name="Changes" comment="feat: openapi to mcp server tools&#10;doc: readme file">
-      <change afterPath="$PROJECT_DIR$/server_api.py" afterDir="false" />
+    <list default="true" id="733e41bd-74d4-4a9a-9ad0-13da2a00b706" name="Changes" comment="feat: API server endpoints to mcp server tools">
+      <change afterPath="$PROJECT_DIR$/proxy_server.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/server_api.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +50,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Python.proxy_server.executor": "Run",
     "Python.server.executor": "Run",
     "Python.server_api.executor": "Run",
     "Python.server_openapi.executor": "Run",
@@ -63,7 +65,29 @@
       <recent name="C:\Users\user\Documents\projects\mcp-exp" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.server_api">
+  <component name="RunManager" selected="Python.server_openapi">
+    <configuration name="proxy_server" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="mcp-exp" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/proxy_server.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="server_api" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="mcp-exp" />
       <option name="ENV_FILES" value="" />
@@ -132,14 +156,16 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Python.proxy_server" />
       <item itemvalue="Python.server_api" />
       <item itemvalue="Python.server_openapi" />
       <item itemvalue="Python.server_openapi_console" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.server_api" />
         <item itemvalue="Python.server_openapi" />
+        <item itemvalue="Python.proxy_server" />
+        <item itemvalue="Python.server_api" />
         <item itemvalue="Python.server_openapi_console" />
       </list>
     </recent_temporary>
@@ -176,13 +202,22 @@
       <option name="project" value="LOCAL" />
       <updated>1757956550040</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="feat: API server endpoints to mcp server tools">
+      <option name="closed" value="true" />
+      <created>1758036397265</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1758036397265</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="initial project" />
     <MESSAGE value="feat: openapi to mcp server tools&#10;doc: readme file" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: openapi to mcp server tools&#10;doc: readme file" />
+    <MESSAGE value="feat: API server endpoints to mcp server tools" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: API server endpoints to mcp server tools" />
   </component>
 </project>

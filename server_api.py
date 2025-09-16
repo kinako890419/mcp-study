@@ -3,7 +3,7 @@ from typing import Any, Coroutine
 import httpx
 from fastmcp import FastMCP, Context
 from fastmcp.server.dependencies import get_http_headers
-from httpx import HTTPError, HTTPStatusError
+from httpx import HTTPStatusError
 
 API_BASE_URL = "http://localhost:8888"
 mcp = FastMCP("API server MCP")
