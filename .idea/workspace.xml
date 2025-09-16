@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="733e41bd-74d4-4a9a-9ad0-13da2a00b706" name="Changes" comment="feat: proxy server (todo)">
-      <change beforePath="$PROJECT_DIR$/proxy_server.py" beforeDir="false" afterPath="$PROJECT_DIR$/proxy_server.py" afterDir="false" />
-    </list>
+    <list default="true" id="733e41bd-74d4-4a9a-9ad0-13da2a00b706" name="Changes" comment="fix: proxy server (for claude desktop demo openapi server)" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -216,7 +214,15 @@
       <option name="project" value="LOCAL" />
       <updated>1758045824138</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="fix: proxy server (for claude desktop demo openapi server)">
+      <option name="closed" value="true" />
+      <created>1758046487664</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1758046487664</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -225,6 +231,7 @@
     <MESSAGE value="feat: openapi to mcp server tools&#10;doc: readme file" />
     <MESSAGE value="feat: API server endpoints to mcp server tools" />
     <MESSAGE value="feat: proxy server (todo)" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: proxy server (todo)" />
+    <MESSAGE value="fix: proxy server (for claude desktop demo openapi server)" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: proxy server (for claude desktop demo openapi server)" />
   </component>
 </project>

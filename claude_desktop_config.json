@@ -1,0 +1,21 @@
+{
+    "mcpServers": {
+        "filesystem": {
+            "command": "npx",
+            "args": [
+                "-y",
+                "@modelcontextprotocol/server-filesystem",
+                "/Users/user/Downloads"
+            ]
+        },
+        "project-task-manager": {
+            "command": "C:\\Users\\user\\Documents\\projects\\mcp-exp\\.venv\\Scripts\\python.exe",
+            "args": [
+                "C:\\Users\\user\\Documents\\projects\\mcp-exp\\proxy_server.py"
+            ],
+            "env": {
+                "API_TOKEN": "eyJhbGciOiJIUzUxMiJ9.eyJyb2xlcyI6WyJST0xFX1VTRVIiXSwidXNlcklkIjo3LCJzdWIiOiJhYmNAdGVzdC5jb20iLCJpYXQiOjE3NTgwMzUyOTcsImV4cCI6MTc1ODEyMTY5N30.D4GYZ3cHA5TccVnRiTT2p2Dv7f7zY1EFnktUaj_bqEby7D_4UIkoghqU4lsCKGGmwEwZJTittDBH-WiFTLSafg"
+            }
+        }
+    }
+}
