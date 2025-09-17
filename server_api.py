@@ -1,5 +1,3 @@
-from typing import Any, Coroutine
-
 import httpx
 from fastmcp import FastMCP, Context
 from fastmcp.server.dependencies import get_http_headers

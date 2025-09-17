@@ -4,9 +4,8 @@ from fastmcp.client import StreamableHttpTransport
 from fastmcp.server.proxy import ProxyClient
 
 
-REMOTE_MCP_URL = "http://127.0.0.1:8000/mcp"
-TOKEN = os.getenv("API_TOKEN")
-headers = {"Authorization": f"Bearer {TOKEN}"} if TOKEN else {}
+REMOTE_MCP_URL = "http://127.0.0.1:8002/mcp"
+TOKEN = os.getenv("API_TOKEN")  # load token from local config file
 
 transport = StreamableHttpTransport(
     url=REMOTE_MCP_URL,

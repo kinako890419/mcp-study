@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="733e41bd-74d4-4a9a-9ad0-13da2a00b706" name="Changes" comment="fix: proxy server (for claude desktop demo openapi server)" />
+    <list default="true" id="733e41bd-74d4-4a9a-9ad0-13da2a00b706" name="Changes" comment="feat: claude desktop configuration file">
+      <change afterPath="$PROJECT_DIR$/multi_server_proxy.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proxy_server.py" beforeDir="false" afterPath="$PROJECT_DIR$/proxy_server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/server_api.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server_openapi.py" beforeDir="false" afterPath="$PROJECT_DIR$/server_openapi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server_openapi_console.py" beforeDir="false" afterPath="$PROJECT_DIR$/server_openapi_console.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -43,20 +51,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Python.proxy_server.executor": "Run",
-    "Python.server.executor": "Run",
-    "Python.server_api.executor": "Run",
-    "Python.server_openapi.executor": "Run",
-    "Python.server_openapi_console.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Python.proxy_server.executor&quot;: &quot;Run&quot;,
+    &quot;Python.server.executor&quot;: &quot;Run&quot;,
+    &quot;Python.server_api.executor&quot;: &quot;Run&quot;,
+    &quot;Python.server_openapi.executor&quot;: &quot;Run&quot;,
+    &quot;Python.server_openapi_console.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/user/Documents/projects/mcp-exp&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\user\Documents\projects\mcp-exp" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\user\Documents\projects\mcp-exp" />
     </key>
@@ -113,6 +125,7 @@
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="FASTMCP_EXPERIMENTAL_ENABLE_NEW_OPENAPI_PARSER" value="true" />
       </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -222,7 +235,15 @@
       <option name="project" value="LOCAL" />
       <updated>1758046487664</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="feat: claude desktop configuration file">
+      <option name="closed" value="true" />
+      <created>1758046675044</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1758046675044</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -232,6 +253,7 @@
     <MESSAGE value="feat: API server endpoints to mcp server tools" />
     <MESSAGE value="feat: proxy server (todo)" />
     <MESSAGE value="fix: proxy server (for claude desktop demo openapi server)" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: proxy server (for claude desktop demo openapi server)" />
+    <MESSAGE value="feat: claude desktop configuration file" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: claude desktop configuration file" />
   </component>
 </project>

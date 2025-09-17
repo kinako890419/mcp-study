@@ -56,19 +56,24 @@ mcp = FastMCP.from_openapi(
 """ Add custom tool"""
 
 
-@mcp.tool()
-def get_weather(city: str, unit: str = "celsius") -> WeatherData:
-    """Get weather for a city - returns structured data."""
-    # Simulated weather data
-    return WeatherData(
-        city=city,
-        temperature=22.5,
-        unit=unit,
-    )
+# @mcp.tool(
+#     description="Process API polling with progress status updates.",
+# )
+# async def process_polling(ctx: Context):
+#
+#     status = ["progress", "progress", "progress", "progress", "progress", "completed"]
+#     index = 0
+#
+#     while status[index] != "completed":
+#         await asyncio.sleep(10)
+#         await ctx.report_progress(progress=index + 1,
+#                                   message=f"Status: {status[index]}, step {index + 1}")
+#         index += 1
+#     return "Processing complete!"
 
 
 if __name__ == "__main__":
-    mcp.run(transport="http")
+    mcp.run(transport="http", port=8002)
 
     # # Option 2: With ASGI app
     # app = mcp.http_app()
